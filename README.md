@@ -1,4 +1,10 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Redirecting to https://bob.github.io/repo/</title>
+<meta http-equiv="refresh" content="0; URL=https://azulrojo.com/survivalkits/">
+<link rel="canonical" href="https://azulrojo.com/survivalkits/">
 # azulrojo.com
+
 
 this site is going to be the canvas for all community projects and all other projects that I find beneficial more than myself. 
 
