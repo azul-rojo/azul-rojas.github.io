@@ -1,0 +1,15 @@
+@import "../../mixins.scss";
+
+.section {
+  
+  margin: 0px 20px 0px;
+  max-width: 1080px;
+
+  &.fullScreen {
+    height: 100vh;
+  }
+
+  @include extra-large-devices {
+    margin: auto;
+  }
+}

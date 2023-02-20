@@ -1,0 +1,75 @@
+@import "../../mixins.scss";
+
+.cardHeading {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.sectionCard {
+  align-items: stretch;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .headingPanel {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+  }
+  .descriptionPanel {
+    padding: 0 20px 40px;
+  }
+
+  .description {
+    position: relative;
+    margin-bottom: 20px;
+
+    // &::before {
+      // ehh
+    //   border-bottom-style: solid;
+    //   border-bottom-width: 1px;
+    //   bottom: -10px;
+    //   content: "";
+    //   display: block;
+    //   height: 1px;
+    //   left: 0;
+    //   margin: 0 20%;
+    //   position: absolute;
+    //   width: 60%;
+    // } 
+  }
+
+  @include medium-devices {
+    flex-direction: row;
+
+    .headingPanel {
+      border-right: solid black 1px;
+      padding: 20px;
+      width: 60%;
+    }
+
+    .descriptionPanel {
+      padding: 40px 20px 60px;
+      width: 40%;
+    }
+  }
+
+  @include extra-large-devices {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+  }
+}
+
+.linkButton {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
