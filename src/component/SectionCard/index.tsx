@@ -24,7 +24,7 @@ const CardHeading = ({ children }: CardHeadingProps) => {
 }
 
 // A card for a page to take up the whole space whiles looking good!
-const SectionCard = forwardRef<HTMLDivElement, CardProps>(({ className, id, title, description, buttonLink, buttonText='View' }: CardProps, ref) => {
+export const SectionCard = forwardRef<HTMLDivElement, CardProps>(({ className, id, title, description, buttonLink, buttonText='View' }: CardProps, ref) => {
   return (
     <div className={clasnames(className, styles.sectionCard)} id={id} ref={ref} >
       <div className={styles.headingPanel}>
@@ -42,5 +42,3 @@ const SectionCard = forwardRef<HTMLDivElement, CardProps>(({ className, id, titl
     </div>
   );
 });
-
-export default SectionCard;
