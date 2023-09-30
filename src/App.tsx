@@ -1,20 +1,13 @@
 import './App.css';
-import Section from './component/Section';
-import { SectionCard } from './component/SectionCard';
-import sections from './constants/sections';
+
+import { RouterProvider} from "react-router-dom";
+import { router } from './Routes';
+
 
 function App() {
   return (
     <div className="App">
-      {sections.map((sectionProps, index) => {
-        return (
-          <Section key={`section-${index}`}>
-            <SectionCard
-              {...sectionProps}
-            />
-          </Section>
-        )
-      })}
+      <RouterProvider router={router} />
     </div>
   );
 }
