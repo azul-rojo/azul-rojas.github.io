@@ -1,0 +1,16 @@
+@import "../../mixins.scss";
+
+.menu {
+  height: 100vh;
+  overflow: auto;
+  padding: 20px;
+  width: 250px;
+
+  @include medium-devices {
+    border-right: 1px solid #e0e0e0;
+  }
+}
+
+.title {
+  text-align: center;
+}
