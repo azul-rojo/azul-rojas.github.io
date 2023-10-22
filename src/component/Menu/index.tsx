@@ -12,7 +12,7 @@ export interface MenuProps {
 
 export const Menu = ({ theme, title } : MenuProps) => {
   theme = theme || DEFAULT_THEME;
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
