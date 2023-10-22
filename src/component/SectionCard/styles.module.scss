@@ -1,4 +1,5 @@
 @import "../../mixins.scss";
+@import "../../colors.scss";
 
 .cardHeading {
   font-weight: bold;
@@ -10,7 +11,7 @@
   align-items: stretch;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-color: black;
+  border-color: $dark-theme-line-color;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -29,27 +30,13 @@
   .description {
     position: relative;
     margin-bottom: 20px;
-
-    // &::before {
-      // ehh
-    //   border-bottom-style: solid;
-    //   border-bottom-width: 1px;
-    //   bottom: -10px;
-    //   content: "";
-    //   display: block;
-    //   height: 1px;
-    //   left: 0;
-    //   margin: 0 20%;
-    //   position: absolute;
-    //   width: 60%;
-    // } 
   }
 
   @include medium-devices {
     flex-direction: row;
 
     .headingPanel {
-      border-right: solid black 1px;
+      border-right: solid $dark-theme-line-color 1px;
       padding: 20px;
       width: 60%;
     }
