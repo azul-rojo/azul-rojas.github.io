@@ -1,13 +1,29 @@
 @import "../../mixins.scss";
+@import "../../colors.scss";
 
 .menu {
+  background: $dark-theme-background-color;
   height: 100vh;
+  left: -250px;
   overflow: auto;
   padding: 20px;
+  position: absolute;
+  transition: left 250ms;
   width: 250px;
+  z-index: 10;
+  border-right: 1px solid $dark-theme-line-color;
+}
 
-  @include medium-devices {
-    border-right: 1px solid #e0e0e0;
+.menu.open {
+  left: 0;
+}
+
+@include medium-devices {
+  .menu {
+    // border-right: 1px solid $line-color;
+    left: 0;
+    position: relative;
+    z-index: 0;
   }
 }
 

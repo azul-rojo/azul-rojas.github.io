@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 .app {
   display: flex;
   height: 100vh;
@@ -6,4 +8,9 @@
 .main {
   height: 100vh;
   overflow: auto;
+}
+
+.dark {
+  background-color: $dark-theme-background-color;
+  color: $dark-theme-text-color;
 }
