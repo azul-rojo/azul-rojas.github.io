@@ -33,12 +33,12 @@
 }
 
 .dark span {
-  background: $dark-theme-text-color;
+  background: $dark-theme-text-color-1;
 }
 
 .light span {
-  // background: white;
-  // TODO: fill this out
+  background: $light-theme-line-color-1;
+  background: $light-theme-line-color-2;
 }
 
 // .hamburgerButton span:nth-child(2) {

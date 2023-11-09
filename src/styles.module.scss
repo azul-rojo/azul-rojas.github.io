@@ -10,7 +10,15 @@
   overflow: auto;
 }
 
+
+// theme colors here should be temp
+// every component should handle the theme
 .dark {
   background-color: $dark-theme-background-color;
-  color: $dark-theme-text-color;
+  color: $dark-theme-line-color-2;
+}
+
+.light {
+  background-color: $light-theme-background-color;
+  color: $light-theme-line-color-2;
 }

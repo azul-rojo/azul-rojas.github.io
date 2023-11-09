@@ -11,7 +11,7 @@
   align-items: stretch;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-color: $dark-theme-line-color;
+  border-color: $dark-theme-line-color-1;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -36,7 +36,7 @@
     flex-direction: row;
 
     .headingPanel {
-      border-right: solid $dark-theme-line-color 1px;
+      border-right: solid $dark-theme-line-color-1 1px;
       padding: 20px;
       width: 60%;
     }
