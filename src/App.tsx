@@ -8,10 +8,10 @@ import classNames from "classnames";
 import { useTheme } from "./hooks/useTheme";
 
 function App() {
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <GlobalContext.Provider value={{ theme }}>
+    <GlobalContext.Provider value={{ theme, toggleTheme }}>
       <main className={classNames(styles.app, styles[theme])}>
         <Menu {...MENU_PROPS} theme={theme} />
         <div className={classNames(styles.main, styles[theme])}>
