@@ -1,18 +1,23 @@
-import Section from '../component/Section';
-import { SectionCard } from '../component/SectionCard';
-import sections from '../constants/sections';
+import home from './home.md';
+import { useContext, useEffect, useState } from 'react';
+import { CustomMarkdown } from '../component/CustomMakrdown';
+import { Page } from '../component/Page';
+import { GlobalContext } from '../GlobalContext';
+
 
 export const Home = () => {
-  return <>
-     {
-        sections.map((sectionProps, index) => {
-        return (
-          <Section key={`section-${index}`}>
-            <SectionCard
-              {...sectionProps}
-            />
-          </Section>
-        )
-      })}
-    </> 
-};
+  const [content, setContent] = useState('');
+  const { theme } = useContext(GlobalContext);
+
+  useEffect(() => {
+    fetch(home)
+      .then(res => res.text())
+      .then((t) => {
+        setContent(t as unknown as string);
+      })
+  }, [])
+
+  return <Page>
+    <CustomMarkdown theme={theme}>{content}</CustomMarkdown>
+  </Page>
+}

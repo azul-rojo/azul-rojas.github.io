@@ -18,7 +18,7 @@ export const Menu = ({ theme, title } : MenuProps) => {
     <>
       <HamburgerButton toggle={isOpen} onClick={() => setIsOpen(!isOpen)} theme={theme} />
       <div className={classNames(styles.menu, styles[theme], { [styles.open]: isOpen })}>
-        <Heading className={styles.title} headingType="h1" text={title} theme={theme} />
+        <Heading className={styles.title} headingType="h1" theme={theme}>{ title }</Heading>
       </div>
     </>
   );

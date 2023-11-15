@@ -2,6 +2,7 @@
 @import "../../colors.scss";
 
 .menu {
+  flex-shrink: 0;
   height: 100vh;
   left: -250px;
   overflow: auto;
