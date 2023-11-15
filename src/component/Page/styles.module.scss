@@ -1,0 +1,12 @@
+@import "../../mixins.scss";
+
+.page {
+  padding: 20px;
+  width: 100%;
+}
+
+@include medium-devices {
+  .page {
+    padding: 20px 40px 40px;
+  }
+}
