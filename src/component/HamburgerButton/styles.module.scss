@@ -8,7 +8,6 @@
   flex-direction: column;
   height: 48px;
   justify-content: center;
-  position: absolute;
   user-select: none;
   width: 48px;
   z-index: 100;
@@ -40,14 +39,6 @@
   background: $light-theme-line-color-1;
   background: $light-theme-line-color-2;
 }
-
-// .hamburgerButton span:nth-child(2) {
-//   bottom: 15px;
-// }
-
-// .hamburgerButton span:last-child {
-//   bottom: 5px;
-// }
 
 /* Burger Close */
 .isNotToggled span:first-child {

@@ -1,5 +1,3 @@
-import { MenuProps } from "../component/Menu";
-
-export const MENU_PROPS: MenuProps = {
+export const MENU_PROPS = {
   title: 'Azul Rojo'
 }

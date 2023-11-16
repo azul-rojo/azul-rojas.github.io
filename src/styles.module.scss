@@ -1,24 +1,40 @@
 @import "./colors.scss";
+@import "./mixins.scss";
 
 .app {
-  display: flex;
   height: 100vh;
+  display: block;
+  
+  @include medium-devices {
+    display: flex;
+  }
+}
+
+.app.dark {
+  background-color: $dark-theme-background-color;
+}
+
+.app.light {
+  background-color: $light-theme-background-color;
 }
 
 .main {
-  height: 100vh;
-  overflow: auto;
+  min-height: 100vh;
+
+  &.isOpen {
+    min-height: 0;
+    max-height: calc(100vh - 48px);
+    overflow: hidden;
+  }
 }
 
+@include medium-devices {
+  .app {
+    display: flex;
+  }
 
-// theme colors here should be temp
-// every component should handle the theme
-.dark {
-  background-color: $dark-theme-background-color;
-  color: $dark-theme-line-color-2;
-}
-
-.light {
-  background-color: $light-theme-background-color;
-  color: $light-theme-line-color-2;
+  .main {
+    height: 100vh;
+    overflow: auto;
+  }
 }

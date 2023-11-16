@@ -17,7 +17,7 @@ export const Home = () => {
       })
   }, [])
 
-  return <Page>
+  return <Page theme={theme}>
     <CustomMarkdown theme={theme}>{content}</CustomMarkdown>
   </Page>
 }
