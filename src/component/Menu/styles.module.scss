@@ -8,9 +8,19 @@
   overflow: auto;
   padding: 20px;
   position: absolute;
+  top: 0;
   transition: left 250ms;
   width: 250px;
   z-index: 10;
+}
+
+.openLayout {
+  backdrop-filter: blur(5px);
+  display: block;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .dark {
@@ -32,6 +42,7 @@
     // border-right: 1px solid $line-color;
     left: 0;
     position: relative;
+    top: 0;
     z-index: 0;
   }
 }
