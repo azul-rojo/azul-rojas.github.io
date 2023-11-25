@@ -3,6 +3,7 @@ import Markdown from 'react-markdown'
 import { Theme } from '../../constants/theme';
 import { Heading } from '../Heading';
 import { Line } from '../Line';
+import { Link } from '../Link';
 import { Text } from '../Text';
 import styles from './styles.module.scss';
 
@@ -34,6 +35,14 @@ export const CustomMarkdown = ({ children, theme, className }: CustomMarkdownPro
         const { children } = props;
 
         return <Text className={componentClassName} theme={theme}>{children}</Text>
+      },
+      a(props) {
+        const { children, href } = props;
+        // this might be confusing since we are using react router and hashes.
+        // so on mds we need to be consistent on using links with hashes (internal)
+        const isInternalLink = !!(href && href.startsWith('/'));
+
+        return <Link isInternal={isInternalLink} href={href || ''}>{children}</Link>
       }
     }}
   >{children}</Markdown>;

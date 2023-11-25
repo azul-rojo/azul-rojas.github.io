@@ -6,6 +6,7 @@ import { MENU_PROPS } from "./constants/menu";
 import { useContext, useState } from "react";
 import classNames from "classnames";
 import styles from './styles.module.scss';
+import { SurvivalKits } from "./Pages/survivalkits";
 
 
 interface RootProps {
@@ -15,7 +16,7 @@ interface RootProps {
 // TODO: this should be it's own component. where should we put this?
 const Root = ({ children }: RootProps) => { 
   const { theme } = useContext(GlobalContext);
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <main className={classNames(styles.app, styles[theme])}>
@@ -39,7 +40,7 @@ export const router = createHashRouter([
       },
       {
         path: "survivalkits",
-        element: <div>surival kits</div>,
+        element: <SurvivalKits />,
       },
     ]
   },
