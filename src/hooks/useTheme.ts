@@ -6,7 +6,7 @@ type Colors = { dark: string, light: string; }
 const isSystemDarkTheme = window.matchMedia('(prefers-color-scheme: dark)');
 const LIGHT_THEME_COLOR = 'rgb(248, 249, 250)';
 const DARK_THEME_COLOR = 'rgb(28, 28, 28)';
-const DEFAULT_SYSTEM_COLOR = isSystemDarkTheme ? DARK_THEME_COLOR : LIGHT_THEME_COLOR;
+const DEFAULT_SYSTEM_COLOR = isSystemDarkTheme.matches ? DARK_THEME_COLOR : LIGHT_THEME_COLOR;;
 
 // set default colors
 document.querySelector("meta[name='theme-color']")?.setAttribute('content', DEFAULT_SYSTEM_COLOR);
