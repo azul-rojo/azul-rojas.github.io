@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import classNames from "classnames";
 import { HamburgerButton } from "../HamburgerButton";
 import { Theme } from "../../constants/theme";
-import { Link, LinkProps } from "../Link";
+import { Link, LinkBase } from "../Link";
 import { Line } from "../Line";
 
 export interface MenuProps {
@@ -13,11 +13,11 @@ export interface MenuProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
   linkSections: {
     sectionName?: string;
-    links: LinkProps[];
+    links: LinkBase[] ;
   }[]
 }
 
-export const Menu = ({ theme, title, isOpen, setIsOpen, linkSections } : MenuProps) => {
+export const Menu = ({ isOpen, linkSections, setIsOpen, theme, title } : MenuProps) => {
 
   return (
     <>
@@ -31,14 +31,17 @@ export const Menu = ({ theme, title, isOpen, setIsOpen, linkSections } : MenuPro
 
           return (
             <div key={sectionKey} className={styles.section}>
-              {sectionName && <Heading headingType='h5' className={styles.sectionHeading}>{sectionName}</Heading>}
+              {sectionName && <Heading headingType='h5' className={styles.sectionHeading} theme={theme}>{sectionName}</Heading>}
               {links.map((linkProps, linkIndex) => {
                 const linkKey = sectionKey + linkIndex;
+                const { href } = linkProps;
 
                 return (
                   <div className={styles.linkWrapper}>
                     <Link
                       {...linkProps}
+                      href={href}
+                      theme={theme}
                       key={linkKey}
                       className={styles.link}
                       onClick={() => { setIsOpen(false); }} />
