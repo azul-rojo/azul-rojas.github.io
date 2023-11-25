@@ -1,0 +1,11 @@
+@import "../../colors.scss";
+
+.link {
+    color: $dark-theme-text-color-2;
+    text-decoration: none;
+    transition: color 250ms;
+
+    &:hover {
+        color: $dark-theme-text-color-1;
+    }
+}
