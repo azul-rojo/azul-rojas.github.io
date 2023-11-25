@@ -7,15 +7,16 @@ export interface LinkProps {
   className?: string;
   href: string;
   isInternal?: boolean;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement> | undefined;
 }
 
-export const Link = ({ children, className, href, isInternal }: LinkProps) => { 
+export const Link = ({ children, className, href, isInternal, onClick }: LinkProps) => { 
   isInternal = isInternal || false;
   const classes = classNames(styles.link, className);
 
   if (isInternal) {
-    return <RouterLink  to={'/survivalkits'}>test</RouterLink>;
+    return <RouterLink className={classes} to={href} onClick={onClick}>{children}</RouterLink>;
   } else {
-    return <a className={classes} href={href}>{children}</a>;
+    return <a className={classes} href={href} onClick={onClick}>{children}</a>;
   }
 };

@@ -3,8 +3,9 @@
 .link {
     color: $dark-theme-text-color-2;
     text-decoration: none;
+    transition: color 250ms;
+
     &:hover {
-        text-decoration: underline;
         color: $dark-theme-text-color-1;
     }
 }

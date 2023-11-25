@@ -3,8 +3,6 @@ import { router } from './Routes';
 import { GlobalContext } from './GlobalContext';
 import { useTheme } from "./hooks/useTheme";
 
-
-
 function App() {
   const { theme, toggleTheme } = useTheme();
 
