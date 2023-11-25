@@ -4,7 +4,7 @@
   text-decoration: none;
   transition: color 250ms;
 
-  .dark {
+  &.dark {
     color: $dark-theme-text-color-2;
 
     &:hover {
