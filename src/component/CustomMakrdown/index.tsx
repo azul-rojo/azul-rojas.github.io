@@ -42,7 +42,7 @@ export const CustomMarkdown = ({ children, theme, className }: CustomMarkdownPro
         // so on mds we need to be consistent on using links with hashes (internal)
         const isInternalLink = !!(href && href.startsWith('/'));
 
-        return <Link isInternal={isInternalLink} href={href || ''}>{children}</Link>
+        return <Link isInternal={isInternalLink} href={href || ''} theme={theme}>{children}</Link>
       }
     }}
   >{children}</Markdown>;
